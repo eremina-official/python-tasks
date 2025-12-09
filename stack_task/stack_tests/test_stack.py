@@ -1,6 +1,5 @@
 import pytest
-from src import Stack
-from src.stack import EmptyStackError
+from stack_task.src.stack import Stack, EmptyStackError
 
 
 # Fixture for a fresh stack
