@@ -25,37 +25,37 @@ final_price = price - (price * discount)
 #     break
 # else:
 #   print('Sorry, wrong answer')
- 
+
 # Car games exercise
 is_active = True
 is_car_started = False
-help_info = '''
+help_info = """
 start - to start the car
 stop - to stop the car
 quit - to quite the game
-'''
+"""
 
 while is_active:
-  user_input = input('>').lower()
-  if user_input == 'help':
-    print(help_info)
-  elif user_input == 'start':
-    if is_car_started:
-      print('Car already started')
+    user_input = input(">").lower()
+    if user_input == "help":
+        print(help_info)
+    elif user_input == "start":
+        if is_car_started:
+            print("Car already started")
+        else:
+            print("Car started")
+            is_car_started = True
+    elif user_input == "stop":
+        if is_car_started:
+            print("Car stropped")
+            is_car_started = False
+        else:
+            print("Car hasn't started")
+    elif user_input == "quit":
+        is_active = False
+        break
     else:
-      print('Car started')
-      is_car_started = True
-  elif user_input == 'stop':
-    if is_car_started:
-      print('Car stropped')
-      is_car_started = False
-    else:
-      print("Car hasn't started")
-  elif user_input == 'quit':
-    is_active = False
-    break
-  else:
-    print('Unknown command')
+        print("Unknown command")
 
 # Data types
 
@@ -70,6 +70,4 @@ while is_active:
 (1, 2, 3, 4, 5, 6)
 
 # dictionary
-{
-  'test': 'Data'
-}
+{"test": "Data"}
