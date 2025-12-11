@@ -35,6 +35,36 @@ stop - to stop the car
 quit - to quite the game
 """
 
+
+"""
+Ways to create dict in Python:
+
+# Literal (recommended), string keys should be in quotes (different from JS)
+todo = {"id": 1, "text": "Buy milk", "done": False}
+
+# dict() constructor (shortcut for identifiers)
+todo = dict(id=1, text="Buy milk", done=False)
+
+# dict() from pairs (dynamic)
+pairs = [("id", 1), ("text", "Buy milk"), ("done", False)]
+todo = dict(pairs)
+
+"""
+
+# list of built in functions:
+
+print()
+input()
+len("test")
+int()
+max(1, 3, 2)  # creates temp list in memory
+
+# any() - lazy evaluation, does not create new list in memeory, does not modify original list
+# next() - lazy evaluation, does not create new list in memeory, does not modify original list
+
+# filter() - creates temp list in memory
+
+
 while is_active:
     user_input = input(">").lower()
     if user_input == "help":
