@@ -1,3 +1,26 @@
+"""Python’s main built-in collections: dict, list, set, and tuple
+
+1. dict (Dictionary)
+Description: Key-value pairs, unordered (Python 3.7+ maintains insertion order), mutable.
+Use: Store and lookup data by unique keys.
+
+2. list
+Description: Ordered, mutable collection of items.
+Use: Store sequences of elements that may change.
+
+3. set
+Description: Unordered collection of unique elements, mutable.
+Use: Remove duplicates, perform set operations like union, intersection.
+
+4. tuple
+Description: Ordered, immutable collection of items.
+Use: Store fixed sequences or use as dictionary keys.
+
+5. collections OrderedDict
+Description: The OrderedDict algorithm can handle frequent reordering operations better than dict
+
+"""
+
 """Dictionaries and Objects in Python
 
 Dictionaries are intended to be simple containers for key-value pairs, not full objects with behavior.
