@@ -4,6 +4,7 @@ from collections import defaultdict
 
 
 # The best way to reduce array to value in python is to use for...in loop or pandas library
+# This is a 'group by' and 'reduce to one value' task
 #
 # Why we use defaultdict to instead of dict for resulting value:
 # when we add key:value pairs, defaultdict automatically creates key if it does not exist
