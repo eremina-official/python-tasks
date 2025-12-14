@@ -1,0 +1,8 @@
+[
+  {"product": "Coffee A", "quantity": 10, "price": 25.5, "country": "PL"},
+  {"product": "Coffee B", "quantity": 5, "price": 30.0, "country": "PL"},
+  {"product": "Coffee A", "quantity": 2, "price": 25.5, "country": "DE"},
+  {"product": "Coffee A", "quantity": 30, "price": 25.5, "country": "EN"},
+  {"product": "Coffee B", "quantity": 5, "price": 30.0, "country": "PL"},
+  {"product": "Coffee A", "quantity": 2, "price": 25.5, "country": "EN"}
+]
