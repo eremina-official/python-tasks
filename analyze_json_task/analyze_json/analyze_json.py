@@ -21,20 +21,20 @@ from collections import defaultdict
 # Use type hints + docstrings.
 
 
-def load_data(filename) -> list:
+def load_data(filename) -> list[dict]:
     BASE = Path(__file__).parent
     file_path = BASE / filename
 
     try:
         with open(file_path) as f:
-            content = f.read()
-            return json.loads(content)
+            return json.load(f)
+
     except (FileNotFoundError, json.JSONDecodeError):
         print(f"error loading file {filename}")
         return []
 
 
-def compute_revenue(data, key):
+def compute_revenue(data: list[dict], key: str) -> dict[str, float]:
     revenue = defaultdict(float)
     for item in data:
         revenue[item[key]] += item["quantity"] * item["price"]
@@ -42,6 +42,8 @@ def compute_revenue(data, key):
 
 
 def find_top(data):
+    if not data:
+        return None, None
     key = max(data, key=data.get)
     return (key, data[key])
 
