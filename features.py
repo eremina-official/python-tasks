@@ -66,3 +66,7 @@ max(1, 3, 2)  # creates temp list in memory
 # set comprehension: {x for x in ...}
 # dict comprehension: {key: value for key, value in ...}
 # generator expression: (x for x in ...)
+
+# conditional expression (ternary operator):
+# value_if_true if condition else value_if_false
+# test = item if item > 0 else item + 1

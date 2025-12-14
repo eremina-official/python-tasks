@@ -42,5 +42,6 @@ def test_find_top_country():
 
 
 def test_find_top_empty_dict():
-    with pytest.raises(ValueError):
-        find_top({})
+    top, top_value = find_top({})
+    assert top is None
+    assert top_value is None
