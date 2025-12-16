@@ -23,3 +23,5 @@ sorted_lst3 = lst3.sort(key=lambda k: k["a"])
 sorted_lst4 = sorted(lst4, key=lambda k: k["a"])
 print(lst3, sorted_lst3)
 print(lst4, sorted_lst4)
+
+# Sort by multiple keys
