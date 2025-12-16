@@ -27,3 +27,4 @@ def group_by_defaultdict(data: list) -> dict[str, int]:
 y = group_by_defaultdict(group_by_data)
 print("group_by_defaultdict", y)
 print(y.items())
+print(list(y))

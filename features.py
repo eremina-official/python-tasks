@@ -64,7 +64,7 @@ max(1, 3, 2)  # creates temp list in memory
 # [item for item in data if condition]
 
 # set comprehension: {x for x in ...}
-# dict comprehension: {key: value for key, value in ...}
+# dict comprehension: {key: value for item in iterable if condition}, if there are duplicate keys previous are overwritten
 # generator expression: (x for x in ...)
 
 # conditional expression (ternary operator):
