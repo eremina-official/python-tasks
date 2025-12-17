@@ -18,11 +18,9 @@ Use: Store fixed sequences or use as dictionary keys.
 
 5. collections OrderedDict
 Description: The OrderedDict algorithm can handle frequent reordering operations better than dict
-
 """
 
 """Dictionaries and Objects in Python
-
 Dictionaries are intended to be simple containers for key-value pairs, not full objects with behavior.
 Dictionaries cannot have methods directly attached to them
 Properteis in dict are accessed with breaket notion
@@ -30,7 +28,6 @@ Properteis in dict are accessed with breaket notion
 Python’s separation of concerns encourages using classes for things that have both data and behavior (methods).
 Objects are instances of Class, dataclass, built-in classes
 Objects properties are accessed with dot notaion
-
 """
 
 """
@@ -45,7 +42,14 @@ todo = dict(id=1, text="Buy milk", done=False)
 # dict() from pairs (dynamic)
 pairs = [("id", 1), ("text", "Buy milk"), ("done", False)]
 todo = dict(pairs)
+"""
 
+"""
+methods to create shallow copy of list, all are equivalent in time complexity O(n)
+lst.copy()
+list(lst)
+lst[:]
+[x for x in lst] - list comprehension
 """
 
 # list of built in functions:
