@@ -52,6 +52,24 @@ lst[:]
 [x for x in lst] - list comprehension
 """
 
+"""
+The ** operator in Python is called the “dictionary unpacking operator” (or sometimes “double star unpacking”).
+Identical do JS ... spread operator
+
+1. Used with dictionaries inside {} to unpack key-value pairs into a new dictionary.
+a = {"x": 1}
+b = {"y": 2}
+merged = {**a, **b}  # → {'x': 1, 'y': 2}
+
+
+2. Used in function calls to unpack keyword arguments.
+def greet(name, age):
+    print(name, age)
+kwargs = {"name": "Alice", "age": 25}
+greet(**kwargs)  # → Alice 25
+"""
+
+
 # list of built in functions:
 
 print()

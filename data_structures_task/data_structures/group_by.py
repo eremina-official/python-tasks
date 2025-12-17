@@ -32,6 +32,8 @@ print(y.items())
 print(list(y))
 
 
+"""--------------- group by key -----------------"""
+
 # Group by key
 # Group values by category
 # [("a",1),("b",2),("a",3)] → {"a":[1,3],"b":[2]}
@@ -64,3 +66,5 @@ def group_by_key2(data):
 
 c = group_by_key2(group_by_key_data)
 print(c)
+
+# not possible to group with dict comprehension because there is the value of key can be reassigned but not merged
