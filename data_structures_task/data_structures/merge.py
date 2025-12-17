@@ -19,7 +19,7 @@ dct3 = {"a": 1}
 dct3.update(dct2)
 print(dct3)
 
-# 3. dictionary unpacking - identical to union operator |, but more readable
+# 3. dictionary unpacking - identical to union operator |, but less readable
 a = {"x": 1}
 b = {"y": 2}
 merged = {**a, **b}
@@ -36,13 +36,10 @@ merged = {**a, **b}
 users = [{"id": 1, "name": "A"}, {"id": 2, "name": "John"}]
 orders = [{"id": 1, "item": "X"}, {"id": 2, "item": "X"}]
 
-# Methods with linear complexity O(m + n) linear, much faster than nested loops O(n*m):
-
-# 1. Using dictionary lookup (hash join)
-
+# Method with linear complexity O(m + n) linear, much faster than nested loops O(n*m):
+# Using dictionary lookup (hash join)
 # build dict for lookup by key (group by key)
 lookup_orders1 = {o["id"]: o for o in orders}
-
 # merge
 result = [{**u, **lookup_orders1[u["id"]]} for u in users]
 print(result)
@@ -82,3 +79,12 @@ for o in orders1:
 # merge
 result2 = [{**u, "orders": lookup_orders2[u["id"]]} for u in users]
 print("result2", result2)
+
+# solution with complexity O(u + o)
+result3 = defaultdict(lambda: {"name": None, "orders": []})
+for u in users1:
+    result3[u["id"]]["name"] = u["name"]
+for o in orders1:
+    result3[o["id"]]["orders"].append(o["item"])
+
+print("result3", dict(result3))
