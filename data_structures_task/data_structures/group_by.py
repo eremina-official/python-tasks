@@ -67,4 +67,4 @@ def group_by_key2(data):
 c = group_by_key2(group_by_key_data)
 print(c)
 
-# not possible to group with dict comprehension because there is the value of key can be reassigned but not merged
+# not possible to group with dict comprehension because the value of key can be reassigned but not merged
