@@ -1,33 +1,43 @@
-# Educational Python project for experimentation and quick tests.
+## Educational Python project for experimentation and quick tests.
 
-## Requirements
+### Requirements
 - Python 3.8+
 - pip
 
-## Installation
+### Installation
+
 1. Clone the repo:
+
+```
   git clone /home/marina/programming/projects/python-test
+```
+
 2. Create and activate a virtual environment:
+
+```
   python -m venv .venv
   source .venv/bin/activate  # Linux/macOS
   .venv\Scripts\activate     # Windows
-3. Install dependencies (if any):
-  pip install -r requirements.txt
+```
 
-## Usage
+3. Install dependencies:
+
+```
+  pip install -r requirements.txt
+```
+
+### Usage
 - Run the main script or module:
+
+```
   python main.py
   or
   python -m python_test
+```
 
-- For quick experiments, edit files under src/ or scripts/.
-
-## Testing
+### Testing
 - Run tests with pytest:
   pytest
 
-## Linting & Formatting
-- Suggested tools: flake8, black, isort
-  pip install black flake8 isort
-  black .
-  flake8 .
+### Linting & Formatting
+- flake8, black
