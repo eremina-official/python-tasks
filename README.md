@@ -1,4 +1,4 @@
-## Educational Python project for experimentation and quick tests.
+## Educational Python project for experimentation and quick tests
 
 ### Requirements
 - Python 3.8+
@@ -9,7 +9,7 @@
 1. Clone the repo:
 
 ```
-  git clone /home/marina/programming/projects/python-test
+  git clone [url]
 ```
 
 2. Create and activate a virtual environment:
@@ -37,7 +37,10 @@
 
 ### Testing
 - Run tests with pytest:
+
+```
   pytest
+```
 
 ### Linting & Formatting
 - flake8, black
