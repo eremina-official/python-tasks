@@ -1,4 +1,5 @@
 import heapq
+from collections import defaultdict, Counter
 
 
 # Find missing numbers
@@ -53,3 +54,40 @@ print("top with sort", find_top(data, 2))
 # heapq - binary min-heap implementation in Python
 result = heapq.nlargest(2, data)
 print("top with heapq", result)
+
+
+"""--------------- find duplicates ---------------"""
+
+# Find duplicates
+# Return repeated values.
+# [1,2,2,3,3] → [2,3]
+
+data_duplicates = [1, 2, 2, 3, 3, 5]
+
+# 1. defaultdict, complexity O(n)
+result_duplicates_dict = defaultdict(int)
+
+for item in data_duplicates:
+    result_duplicates_dict[item] += 1
+
+result_duplicates_list = [
+    key for key, value in result_duplicates_dict.items() if value > 1
+]
+
+print("result_duplicates_list", result_duplicates_list)
+
+# 2. using set, simplest
+set_seen = set()
+set_duplicates = set()
+
+for item in data_duplicates:
+    if item in set_seen:
+        set_duplicates.add(item)
+    else:
+        set_seen.add(item)
+print("set_duplicates", list(set_duplicates))
+
+# 3. Counter, complexity O(n)
+result_counter = [k for k, v in Counter(data_duplicates).items() if v > 1]
+print("result_counter", result_counter)
+print("counter", Counter(data_duplicates))
