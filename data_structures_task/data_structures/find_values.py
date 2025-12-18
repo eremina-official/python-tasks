@@ -1,3 +1,6 @@
+import heapq
+
+
 # Find missing numbers
 # Detect gaps in sequence.
 # [1,2,4,5] → [3]
@@ -30,3 +33,23 @@ for a, b in zip(lst1, lst1[1:]):
     print("zip", "a", a, "b", b)
 for item in range(2, 5):
     print("range", item)
+
+"""--------------- find top values ---------------"""
+
+# Find top-N values
+# Get largest N elements.
+
+data = [5, 1, 3, 2]
+
+
+# 1. sorting, O(n) complexity, ok for small lists
+def find_top(data: list[int], N: int) -> list[int]:
+    return sorted(data, reverse=True)[:N]
+
+
+print("top with sort", find_top(data, 2))
+
+# 2. using heapq, optimal for large datasets
+# heapq - binary min-heap implementation in Python
+result = heapq.nlargest(2, data)
+print("top with heapq", result)
