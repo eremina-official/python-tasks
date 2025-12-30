@@ -15,6 +15,35 @@ print("avg", get_avg(data))
 print("min", min(data))
 print("max", max(data))
 
+"""--------------- sum even numbers ----------------"""
+
+
+# complexity O(n)
+def sum_even(lst: list) -> int:
+    result = 0
+    for n in lst:
+        if n % 2 == 0:
+            result += n
+    return result
+
+
+def is_even(n):
+    return n % 2 == 0
+
+
+sum_even_data = [1, 2, 3, 4, 6, 7]
+
+# modarate good solutions with for loop:
+print("sum_even", sum_even(sum_even_data))
+
+# best and most pythonic solution:
+print(sum(x for x in sum_even_data if x % 2 == 0))
+
+# solutions with bad redability:
+print("sum_even_filter", sum(filter(is_even, sum_even_data)))
+print("sum_even_filter", sum(filter(lambda x: x % 2 == 0, sum_even_data)))
+
+
 """--------------- complex data structres ----------------"""
 
 # Tasks:
