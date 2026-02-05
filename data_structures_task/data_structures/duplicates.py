@@ -41,7 +41,7 @@ print(x1, x2, x3)
 
 
 # Deduplicate list of dicts (by key)
-# Remove duplicate records by ID.
+# Remove duplicate records by ID
 # [{"id":1},{"id":1},{"id":2}] → [{"id":1},{"id":2}]
 
 duplicates2 = [{"id": 1}, {"id": 1}, {"id": 2}]

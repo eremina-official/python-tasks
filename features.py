@@ -23,12 +23,14 @@ Description: The OrderedDict algorithm can handle frequent reordering operations
 """Dictionaries and Objects in Python
 Dictionaries are intended to be simple containers for key-value pairs, not full objects with behavior.
 Dictionaries cannot have methods directly attached to them
-Properteis in dict are accessed with breaket notion
+Properteis in dict are accessed:
+with breaket notion, with .get(key, default_key_value)
 
 Python’s separation of concerns encourages using classes for things that have both data and behavior (methods).
 Objects are instances of Class, dataclass, built-in classes
 Objects properties are accessed with dot notaion
 """
+
 
 """
 Ways to create dict in Python:
@@ -44,6 +46,7 @@ pairs = [("id", 1), ("text", "Buy milk"), ("done", False)]
 todo = dict(pairs)
 """
 
+
 """
 methods to create shallow copy of list, all are equivalent in time complexity O(n)
 lst.copy()
@@ -51,6 +54,7 @@ list(lst)
 lst[:]
 [x for x in lst] - list comprehension
 """
+
 
 """
 The ** operator in Python is called the “dictionary unpacking operator” (or sometimes “double star unpacking”).
@@ -70,25 +74,29 @@ greet(**kwargs)  # → Alice 25
 """
 
 
-# list of built in functions:
+"""
+list of built in functions:
 
 print()
 input()
 len("test")
 int()
 max(1, 3, 2)  # creates temp list in memory
-# any() - lazy evaluation, does not create new list in memeory, does not modify original list
-# next() - lazy evaluation, does not create new list in memeory, does not modify original list
-# filter() - creates temp list in memory
+any() - lazy evaluation, does not create new list in memeory, does not modify original list
+next() - lazy evaluation, does not create new list in memeory, does not modify original list
+filter() - creates temp list in memory
+"""
 
 
-# List comprehension (describe a list):
-# [item for item in data if condition]
+"""
+List comprehension (describe a list):
+[item for item in data if condition]
 
-# set comprehension: {x for x in ...}
-# dict comprehension: {key: value for item in iterable if condition}, if there are duplicate keys previous are overwritten
-# generator expression: (x for x in ...)
+set comprehension: {x for x in ...}
+dict comprehension: {key: value for item in iterable if condition}, if there are duplicate keys previous are overwritten
+generator expression: (x for x in ...)
 
-# conditional expression (ternary operator):
-# value_if_true if condition else value_if_false
-# test = item if item > 0 else item + 1
+conditional expression (ternary operator):
+value_if_true if condition else value_if_false
+test = item if item > 0 else item + 1
+"""
